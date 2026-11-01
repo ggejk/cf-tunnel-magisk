@@ -6,7 +6,7 @@ Root module for ARM64 Android on Magisk and KernelSU. It runs `cloudflared` as a
 
 1. In Cloudflare Zero Trust, create a remotely managed Tunnel and add a Public Hostname route to `http://localhost:3100`.
 2. Protect the hostname with Cloudflare Access. Use a domain active in your Cloudflare account.
-3. Install this module ZIP with Magisk or KernelSU Manager, then reboot. KernelSU extracts the module and runs `customize.sh` to restore executable permissions.
+3. Install this module ZIP with Magisk or KernelSU Manager, then reboot. KernelSU extracts the module and runs `customize.sh` to restore executable permissions. On KernelSU versions supporting hot install, updates can activate without rebooting.
 4. Set the Tunnel token on the device as root:
 
    ```sh
