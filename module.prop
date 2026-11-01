@@ -1,0 +1,6 @@
+id=wmx_cf_tunnel
+name=WMX Cloudflare Tunnel
+version=1.0.0
+versionCode=1
+author=WMX
+description=Expose the local New API service on port 3100 through Cloudflare Tunnel
