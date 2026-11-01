@@ -1,12 +1,12 @@
 # WMX Cloudflare Tunnel
 
-Magisk module for ARM64 Android. It runs `cloudflared` as a named Tunnel and forwards a Cloudflare hostname to a local HTTP service at `127.0.0.1:3100`.
+Root module for ARM64 Android on Magisk and KernelSU. It runs `cloudflared` as a named Tunnel and forwards a Cloudflare hostname to a local HTTP service at `127.0.0.1:3100`. Install the ZIP from the Magisk or KernelSU manager; custom recovery installation is not supported.
 
 ## Setup
 
 1. In Cloudflare Zero Trust, create a remotely managed Tunnel and add a Public Hostname route to `http://localhost:3100`.
 2. Protect the hostname with Cloudflare Access. Use a domain active in your Cloudflare account.
-3. Install this module ZIP with Magisk and reboot.
+3. Install this module ZIP with Magisk or KernelSU Manager, then reboot. KernelSU extracts the module and runs `customize.sh` to restore executable permissions.
 4. Set the Tunnel token on the device as root:
 
    ```sh

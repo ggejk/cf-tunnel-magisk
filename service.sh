@@ -1,6 +1,5 @@
 #!/system/bin/sh
 MODDIR=${0%/*}
-TOKEN_FILE="$MODDIR/token.conf"
 LOG_FILE=/data/local/tmp/wmx-cloudflared.log
 
 # Wait until Android has completed boot before opening network connections.
@@ -24,4 +23,3 @@ fi
 nohup "$MODDIR/tunnel.sh" >> "$LOG_FILE" 2>&1 </dev/null &
 echo $! > "$PID_FILE"
 log -t WMXCloudflared "supervisor started; log: $LOG_FILE"
-exit 0
