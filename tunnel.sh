@@ -13,7 +13,7 @@ while true; do
   fi
 
   log -t WMXCloudflared "Starting named Cloudflare Tunnel"
-  "$BIN" tunnel --no-autoupdate run --token "$TOKEN" &
+  "$BIN" tunnel --no-autoupdate --protocol http2 run --token "$TOKEN" &
   child=$!
   echo "$child" > "$CHILD_PID_FILE"
   unset TOKEN

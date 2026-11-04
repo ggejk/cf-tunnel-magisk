@@ -25,4 +25,4 @@ adb shell su -c 'logcat -d -s WMXCloudflared'
 adb shell su -c 'ps -A | grep cloudflared'
 ```
 
-The Tunnel retries after the `cloudflared` process exits. Android and network availability determine uptime. This module only forwards HTTP traffic; the service on port 3100 must be running and reachable from Android.
+The module forces `cloudflared` to use HTTP/2 to the Cloudflare edge, which avoids QUIC/UDP connectivity failures on networks that block or disrupt UDP. The Tunnel retries after the `cloudflared` process exits. Android and network availability determine uptime. This module only forwards HTTP traffic; the service on port 3100 must be running and reachable from Android.
